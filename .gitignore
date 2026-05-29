@@ -1,4 +1,4 @@
-# OS junk
+﻿# OS junk
 .DS_Store
 Thumbs.db
 desktop.ini
@@ -12,8 +12,14 @@ desktop.ini
 *~
 *.sublime-*
 
+# Obsidian
+.obsidian/
+
 # Awakened local config
 .awakened/
+.agents/
+config.json
+skills-lock.json
 
 # Graphify output
 graphify-out/
