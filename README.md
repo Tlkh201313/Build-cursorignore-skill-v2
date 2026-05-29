@@ -6,19 +6,8 @@ A Cursor Agent skill that scans your project, detects the tech stack, and writes
 
 ## Quick Start (AI Agent Prompt)
 
-Copy-paste this into any AI agent (Cursor, Claude, ChatGPT, etc.) to set up automatically:
-
 ```
-Install the build-cursorignore skill for Cursor Agent.
-
-Steps:
-1. Run: npx skills add Tlkh201313/Build-cursorignore-skill-v2 -a cursor
-2. Open Cursor Agent chat
-3. Type: /build-cursorignore
-4. Wait for it to scan and write .cursorignore + .cursorindexingignore
-5. Open a new Cursor chat to activate the ignore files
-
-Done. The skill auto-detects your tech stack and blocks junk files from AI context.
+Install and run the build-cursorignore skill: npx skills add Tlkh201313/Build-cursorignore-skill-v2 -a cursor then run /build-cursorignore in Cursor Agent and open a new chat.
 ```
 
 ---
