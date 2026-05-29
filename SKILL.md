@@ -1,9 +1,8 @@
-| name                     | build-cursorignore                                                                 |
-| ------------------------ | ---------------------------------------------------------------------------------- |
-| description              | Cursor Agent only. Scans project root, detects stack, writes .cursorignore and    |
-|                          | .cursorindexingignore to block junk files from AI context and indexing. Single    |
-|                          | pass, no phases — run /build-cursorignore and it writes immediately.              |
-| disable-model-invocation | true                                                                               |
+---
+name: build-cursorignore
+description: Cursor Agent only. Scans project root, detects stack, writes .cursorignore and .cursorindexingignore to block junk files from AI context and indexing. Single pass, no phases — run /build-cursorignore and it writes immediately.
+disable-model-invocation: true
+---
 
 ; PROMPT NOTATION — not compilable Lisp. Execute as agent instructions.
 
