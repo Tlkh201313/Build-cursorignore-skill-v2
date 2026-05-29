@@ -30,8 +30,6 @@ graphify-out/
 
 # Dev-only docs (not shipped to users)
 PLAN.md
-OVERVIEW.md
-USAGE.md
 obsidian-architecture.md
 
 # Cache / temp
