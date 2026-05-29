@@ -40,7 +40,7 @@ $TmpDir = Join-Path $env:TEMP "build-cursorignore-install"
 if (Test-Path $TmpDir) { Remove-Item -Recurse -Force $TmpDir }
 
 try {
-  git clone --depth 1 $RepoUrl "$TmpDir\$SkillName" 2>&1 | Out-Null
+  git clone --depth 1 $RepoUrl "$TmpDir\$SkillName"
   if (-not (Test-Path "$TmpDir\$SkillName\SKILL.md")) {
     Write-Host "Error: Clone succeeded but SKILL.md not found" -ForegroundColor Red
     exit 1
