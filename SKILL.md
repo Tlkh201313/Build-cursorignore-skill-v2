@@ -1,4 +1,4 @@
-﻿---
+---
 name: build-cursorignore
 version: 2.0.0
 description: Cursor Agent only. Scans project root, detects stack, writes .cursorignore and .cursorindexingignore to block junk files from AI context and indexing. Single pass, no phases — run /build-cursorignore and it writes immediately.

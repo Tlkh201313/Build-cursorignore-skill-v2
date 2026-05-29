@@ -1,4 +1,4 @@
-﻿# build-cursorignore
+# build-cursorignore
 
 > Auto-generate `.cursorignore` and `.cursorindexingignore` for any project. One command, zero config.
 
@@ -10,7 +10,7 @@
 
 ## What It Does
 
-Scans your project root, detects the tech stack (19 stacks), and writes two ignore files that block junk from Cursor's AI context. Reduces indexing time and token consumption across **all models** — Claude, GPT-4o, Gemini.
+Scans your project root, detects the tech stack (24 stacks), and writes two ignore files that block junk from Cursor's AI context. Reduces indexing time and token consumption across **all models** — Claude, GPT-4o, Gemini.
 
 | Output | Effect |
 |--------|--------|
@@ -167,7 +167,7 @@ See [assets/](assets/) for full template content.
 
 ## Supported Stacks
 
-`js_ts` · `next_js` · `nuxt` · `vite` · `remix` · `svelte` · `astro` · `python` · `django` · `flask` · `java` · `kotlin` · `rust` · `go` · `php` · `ruby` · `rails` · `ios_swift` · `android`
+`js_ts` · `next_js` · `nuxt` · `vite` · `remix` · `svelte` · `astro` · `python` · `django` · `flask` · `java` · `kotlin` · `rust` · `go` · `php` · `ruby` · `rails` · `ios_swift` · `android` · `bun` · `deno` · `flutter` · `elixir` · `scala`
 
 Monorepos: detects `package.json` in subfolders, merges all stacks.
 
