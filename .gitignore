@@ -1,6 +1,30 @@
+# OS junk
+.DS_Store
+Thumbs.db
+desktop.ini
+._*
+
+# Editor / IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+*.sublime-*
+
 # Awakened local config
 .awakened/
 config.json
 
 # Graphify output
 graphify-out/
+
+# Cache / temp
+.cache/
+*.tmp
+*.bak
+*.log
+
+# Node (if someone runs npx locally)
+node_modules/
+package-lock.json
