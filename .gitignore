@@ -1,0 +1,6 @@
+# Awakened local config
+.awakened/
+config.json
+
+# Graphify output
+graphify-out/

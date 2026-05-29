@@ -1,0 +1,144 @@
+# ===================================================================
+# build-cursorignore — UNIVERSAL BASELINE
+# Model-agnostic: works with Claude, GPT-4o, Gemini, and all others.
+# Regenerate: /build-cursorignore in Cursor Agent
+# ===================================================================
+
+# >>> build-cursorignore:baseline BEGIN >>>
+
+# ─── DEPENDENCIES ─────────────────────────────────────────────────
+node_modules/
+vendor/
+bower_components/
+.pnp/
+.pnp.js
+
+# ─── BUILD OUTPUT ─────────────────────────────────────────────────
+dist/
+build/
+out/
+.next/
+.nuxt/
+.svelte-kit/
+.astro/
+.output/
+storybook-static/
+target/
+bin/
+obj/
+
+# ─── CACHES ───────────────────────────────────────────────────────
+.cache/
+.parcel-cache/
+.turbo/
+.rollup.cache/
+.esbuild/
+.eslintcache
+.stylelintcache
+.prettiercache
+*.tsbuildinfo
+.babel_cache/
+__pycache__/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.tox/
+.gradle/
+.m2/
+.build/
+
+# ─── LOGS ─────────────────────────────────────────────────────────
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+pip-log.txt
+
+# ─── COVERAGE & TEST ARTIFACTS ────────────────────────────────────
+coverage/
+.nyc_output/
+htmlcov/
+.coverage
+lcov.info
+playwright-report/
+test-results/
+cypress/screenshots/
+cypress/videos/
+.playwright/
+
+# ─── ENVIRONMENT / SECRETS ────────────────────────────────────────
+.env.local
+.env.*.local
+*.pem
+*.key
+secrets.json
+credentials.*
+serviceAccountKey.json
+.vault-token
+
+# ─── VIRTUAL ENVIRONMENTS ────────────────────────────────────────
+.venv/
+venv/
+env/
+.virtualenv/
+Pipfile.lock
+
+# ─── OS / EDITOR JUNK ────────────────────────────────────────────
+.DS_Store
+._*
+.Spotlight-V100
+.Trashes
+Thumbs.db
+desktop.ini
+*.swp
+*.swo
+*~
+.idea/
+.vscode/extensions.json
+
+# ─── MOBILE ───────────────────────────────────────────────────────
+Pods/
+DerivedData/
+*.xcworkspace/
+xcuserdata/
+.build/
+captures/
+local.properties
+
+# ─── LOCK FILES (commented — uncomment to exclude) ────────────────
+# package-lock.json
+# yarn.lock
+# pnpm-lock.yaml
+# bun.lockb
+
+# ─── LARGE BINARY ASSETS ─────────────────────────────────────────
+*.mp4
+*.mov
+*.avi
+*.mkv
+*.zip
+*.tar.gz
+*.tar.bz2
+*.rar
+*.7z
+*.dmg
+*.iso
+
+# ─── MINIFIED / COMPILED ASSETS ──────────────────────────────────
+*.min.js
+*.min.css
+*.bundle.js
+*.chunk.js
+
+# ─── TERRAFORM / INFRA GENERATED ─────────────────────────────────
+.terraform/
+.terraform.lock.hcl
+.serverless/
+.pulumi/
+.cdktf/
+cdktf.out/
+
+# <<< build-cursorignore:baseline END <<<
