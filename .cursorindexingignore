@@ -1,0 +1,27 @@
+# >>> build-cursorignore:indexing BEGIN >>>
+
+# ─── BUILD OUTPUT ─────────────────────────────────────────────────
+graphify-out/
+
+# ─── CACHES ───────────────────────────────────────────────────────
+.agents/
+.awakened/
+
+# ─── OS / EDITOR JUNK ────────────────────────────────────────────
+.DS_Store
+._*
+Thumbs.db
+desktop.ini
+*.swp
+*.swo
+*~
+.vscode/
+
+# ─── LARGE BINARY ASSETS ─────────────────────────────────────────
+*.zip
+*.tar.gz
+
+# ─── LOCK FILES ──────────────────────────────────────────────────
+*.lock
+
+# <<< build-cursorignore:indexing END <<<

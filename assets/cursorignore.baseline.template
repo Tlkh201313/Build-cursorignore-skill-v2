@@ -108,6 +108,12 @@ xcuserdata/
 captures/
 local.properties
 
+# ─── AI TOOL CONFIG ───────────────────────────────────────────────
+.claude/
+.codex/
+.agents/
+.awakened/
+
 # ─── LOCK FILES (commented — uncomment to exclude) ────────────────
 # package-lock.json
 # yarn.lock

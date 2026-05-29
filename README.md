@@ -1,4 +1,4 @@
-# build-cursorignore
+﻿# build-cursorignore
 
 A Cursor Agent skill that scans your project, detects the tech stack, and writes `.cursorignore` and `.cursorindexingignore` to reduce AI token consumption. Works with all models — Claude, GPT-4o, Gemini.
 
@@ -66,17 +66,6 @@ The skill scans your project root, detects the tech stack, and writes both ignor
 
 ---
 
-## How It Works
-
-| File | Effect |
-|------|--------|
-| `.cursorignore` | **Hard block** — excluded from AI context AND indexing. Files are invisible to all models. |
-| `.cursorindexingignore` | **Soft block** — excluded from search indexing only. You can still `@` a file to reference it manually. |
-
-> Cursor also respects `.gitignore` automatically — no need to duplicate those entries.
-
----
-
 ## After Running
 
 1. **Open a new Agent chat** (recommended — ignore files load on session start)
@@ -112,18 +101,14 @@ To force a path back in: `@` the file directly. Works for `.cursorindexingignore
 
 ## What Gets Written
 
-| File | Purpose |
-|------|---------|
-| `.cursorignore` | Blocks listed paths from AI context AND indexing. Hard exclusion. |
-| `.cursorindexingignore` | Blocks from indexing only. Files can still be `@referenced` manually. |
+| File | Effect |
+|------|--------|
+| `.cursorignore` | **Hard block** — excluded from AI context AND indexing. Files are invisible to all models. |
+| `.cursorindexingignore` | **Soft block** — excluded from search indexing only. You can still `@` a file to reference it manually. |
 
-Both files use managed blocks. Re-runs only touch content inside the managed block — your custom lines are never overwritten.
+Both files use managed blocks — user lines outside the block are never touched. Re-run `/build-cursorignore` anytime to update the baseline.
 
----
-
-## Re-run Safe
-
-Uses managed blocks — user lines outside the block are never touched. Run `/build-cursorignore` anytime to update the baseline.
+> Cursor also respects `.gitignore` automatically — no need to duplicate those entries.
 
 ---
 
@@ -152,6 +137,13 @@ rm -rf ~/.cursor/skills/build-cursorignore
 # Windows
 Remove-Item -Recurse "$env:USERPROFILE\.cursor\skills\build-cursorignore"
 ```
+
+---
+
+## If You Meant "Index" for Something Else
+
+- **Linear / MCP tools** — connect in **Settings → MCP**, not codebase indexing
+- **This skill repo** — no package.json; indexing is just your markdown/skill files minus ignored paths
 
 ---
 

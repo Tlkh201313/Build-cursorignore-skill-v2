@@ -1,5 +1,6 @@
----
+﻿---
 name: build-cursorignore
+version: 2.0.0
 description: Cursor Agent only. Scans project root, detects stack, writes .cursorignore and .cursorindexingignore to block junk files from AI context and indexing. Single pass, no phases — run /build-cursorignore and it writes immediately.
 disable-model-invocation: true
 ---
@@ -28,7 +29,7 @@ disable-model-invocation: true
     (list_top_level_dirs_and_files)
 
     (detect_stack_signals
-      (js_ts      package.json bun.lockb pnpm-lock.yaml yarn.lock package-lock.json)
+      (js_ts      package.json pnpm-lock.yaml yarn.lock package-lock.json)
       (next_js    next.config.js next.config.ts next.config.mjs .next/)
       (nuxt       nuxt.config.ts nuxt.config.js .nuxt/)
       (vite       vite.config.ts vite.config.js)
@@ -46,11 +47,16 @@ disable-model-invocation: true
       (ruby       Gemfile)
       (rails      config/application.rb app/controllers/)
       (ios_swift  *.xcodeproj/ *.xcworkspace/ Podfile)
-      (android    local.properties gradle/))
+      (android    local.properties gradle/)
+      (bun        bunfig.toml)
+      (deno       deno.json deno.jsonc deno.lock)
+      (flutter    pubspec.yaml)
+      (elixir     mix.exs)
+      (scala      build.sbt))
 
     (detect_noise_dirs
       (candidates
-        node_modules/ .next/ dist/ build/ out/ target/ .gradle/ vendor/
+        .agents/ .awakened/ .claude/ .codex/ node_modules/ .next/ dist/ build/ out/ target/ .gradle/ vendor/
         .venv/ venv/ env/ __pycache__/ .cache/ .parcel-cache/ .turbo/
         .rollup.cache/ storybook-static/ coverage/ .nyc_output/ .pytest_cache/
         .mypy_cache/ .ruff_cache/ htmlcov/ Pods/ DerivedData/ .build/
@@ -77,7 +83,12 @@ disable-model-invocation: true
       (php_section        when php)
       (ruby_section       when ruby OR rails)
       (ios_section        when ios_swift)
-      (android_section    when android))
+      (android_section    when android)
+      (bun_section         when bun)
+      (deno_section        when deno)
+      (flutter_section     when flutter)
+      (elixir_section      when elixir)
+      (scala_section       when scala))
 
     (append_detected_noise_dirs to_both_files))
 
