@@ -62,39 +62,13 @@ Done. Open a **new chat** to activate.
 ### Method 1: `npx skills add` (Recommended)
 
 ```bash
-# Project-local
 npx skills add Tlkh201313/Build-cursorignore-skill-v2 -a cursor
-
-# Global (all projects)
-npx skills add Tlkh201313/Build-cursorignore-skill-v2 -g -a cursor
 ```
 
-### Method 2: Install Scripts
-
-**macOS / Linux / WSL:**
+### Method 2: Manual Git Clone
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/Tlkh201313/Build-cursorignore-skill-v2/main/install.sh | bash
-```
-
-**Windows PowerShell:**
-
-```powershell
-irm https://raw.githubusercontent.com/Tlkh201313/Build-cursorignore-skill-v2/main/install.ps1 | iex
-```
-
-### Method 3: Manual Git Clone
-
-```bash
-# macOS / Linux
-git clone --depth 1 https://github.com/Tlkh201313/Build-cursorignore-skill-v2.git /tmp/build-cursorignore
-cp -r /tmp/build-cursorignore ~/.cursor/skills/build-cursorignore
-rm -rf /tmp/build-cursorignore
-
-# Windows PowerShell
-git clone --depth 1 https://github.com/Tlkh201313/Build-cursorignore-skill-v2.git "$env:TEMP\build-cursorignore"
-Copy-Item -Recurse "$env:TEMP\build-cursorignore" "$env:USERPROFILE\.cursor\skills\build-cursorignore"
-Remove-Item -Recurse "$env:TEMP\build-cursorignore"
+git clone --depth 1 https://github.com/Tlkh201313/Build-cursorignore-skill-v2.git ~/.cursor/skills/build-cursorignore
 ```
 
 ---
@@ -195,10 +169,6 @@ npx skills update build-cursorignore
 
 # Uninstall
 npx skills remove build-cursorignore
-
-# Or manual delete
-rm -rf ~/.cursor/skills/build-cursorignore          # macOS/Linux
-Remove-Item -Recurse "$env:USERPROFILE\.cursor\skills\build-cursorignore"  # Windows
 ```
 
 ---

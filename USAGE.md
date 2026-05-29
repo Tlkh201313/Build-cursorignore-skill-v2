@@ -66,22 +66,10 @@ To force a path back in: `@` the file directly. Works for `.cursorindexingignore
 npx skills update build-cursorignore
 ```
 
-Or re-run the install script — it replaces the existing installation.
-
 ---
 
 ## Uninstall
 
 ```bash
 npx skills remove build-cursorignore
-```
-
-Or delete the folder manually:
-
-```bash
-# macOS / Linux
-rm -rf ~/.cursor/skills/build-cursorignore
-
-# Windows
-Remove-Item -Recurse "$env:USERPROFILE\.cursor\skills\build-cursorignore"
 ```
