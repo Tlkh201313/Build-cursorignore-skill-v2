@@ -29,7 +29,7 @@ disable-model-invocation: true
     (list_top_level_dirs_and_files)
 
     (detect_stack_signals
-      (js_ts      package.json pnpm-lock.yaml yarn.lock package-lock.json)
+      (js_ts      package.json bun.lockb pnpm-lock.yaml yarn.lock package-lock.json)
       (next_js    next.config.js next.config.ts next.config.mjs .next/)
       (nuxt       nuxt.config.ts nuxt.config.js .nuxt/)
       (vite       vite.config.ts vite.config.js)

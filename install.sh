@@ -20,6 +20,12 @@ if [ "${1:-}" = "--uninstall" ]; then
   uninstall
 fi
 
+# Check git
+if ! command -v git &>/dev/null; then
+  echo "Error: git is required. Install git and try again." >&2
+  exit 1
+fi
+
 mkdir -p "${CURSOR_SKILLS_DIR}"
 
 if [ -d "${INSTALL_DIR}" ]; then
@@ -30,13 +36,13 @@ fi
 TMPDIR=$(mktemp -d)
 trap 'rm -rf "${TMPDIR}"' EXIT
 
-if command -v git &>/dev/null; then
-  git clone --depth 1 "${REPO_URL}" "${TMPDIR}/${SKILL_NAME}"
-  cp -r "${TMPDIR}/${SKILL_NAME}" "${INSTALL_DIR}"
-else
-  echo "Error: git is required. Install git and try again."
+git clone --depth 1 "${REPO_URL}" "${TMPDIR}/${SKILL_NAME}" 2>/dev/null
+
+if [ ! -f "${TMPDIR}/${SKILL_NAME}/SKILL.md" ]; then
+  echo "Error: Clone succeeded but SKILL.md not found" >&2
   exit 1
 fi
 
+cp -r "${TMPDIR}/${SKILL_NAME}" "${INSTALL_DIR}"
 echo "Installed to ${INSTALL_DIR}"
 echo "Run /build-cursorignore in Cursor Agent to use."
