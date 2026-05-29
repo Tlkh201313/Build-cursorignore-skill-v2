@@ -4,7 +4,7 @@ set -euo pipefail
 SKILL_NAME="build-cursorignore"
 CURSOR_SKILLS_DIR="${HOME}/.cursor/skills"
 INSTALL_DIR="${CURSOR_SKILLS_DIR}/${SKILL_NAME}"
-REPO_URL="https://github.com/owner/${SKILL_NAME}.git"
+REPO_URL="https://github.com/Tlkh201313/Build-cursorignore-skill-v2.git"
 
 uninstall() {
   if [ -d "${INSTALL_DIR}" ]; then

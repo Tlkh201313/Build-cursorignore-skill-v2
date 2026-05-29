@@ -8,10 +8,10 @@ A Cursor Agent skill that scans your project, detects the tech stack, and writes
 
 ```bash
 # Global (available across all projects)
-npx skills add owner/build-cursorignore -g -a cursor
+npx skills add Tlkh201313/Build-cursorignore-skill-v2 -g -a cursor
 
 # Project-local (committed with project)
-npx skills add owner/build-cursorignore -a cursor
+npx skills add Tlkh201313/Build-cursorignore-skill-v2 -a cursor
 ```
 
 ### Method 2: Install Scripts
@@ -19,25 +19,25 @@ npx skills add owner/build-cursorignore -a cursor
 **macOS / Linux / WSL:**
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/owner/build-cursorignore/main/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/Tlkh201313/Build-cursorignore-skill-v2/main/install.sh | bash
 ```
 
 **Windows PowerShell:**
 
 ```powershell
-irm https://raw.githubusercontent.com/owner/build-cursorignore/main/install.ps1 | iex
+irm https://raw.githubusercontent.com/Tlkh201313/Build-cursorignore-skill-v2/main/install.ps1 | iex
 ```
 
 ### Method 3: Manual Git Clone
 
 ```bash
 # macOS / Linux
-git clone --depth 1 https://github.com/owner/build-cursorignore.git /tmp/build-cursorignore
+git clone --depth 1 https://github.com/Tlkh201313/Build-cursorignore-skill-v2.git /tmp/build-cursorignore
 cp -r /tmp/build-cursorignore ~/.cursor/skills/build-cursorignore
 rm -rf /tmp/build-cursorignore
 
 # Windows PowerShell
-git clone --depth 1 https://github.com/owner/build-cursorignore.git "$env:TEMP\build-cursorignore"
+git clone --depth 1 https://github.com/Tlkh201313/Build-cursorignore-skill-v2.git "$env:TEMP\build-cursorignore"
 Copy-Item -Recurse "$env:TEMP\build-cursorignore" "$env:USERPROFILE\.cursor\skills\build-cursorignore"
 Remove-Item -Recurse "$env:TEMP\build-cursorignore"
 ```

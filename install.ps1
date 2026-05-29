@@ -5,7 +5,7 @@ param(
 $SkillName = "build-cursorignore"
 $CursorSkillsDir = Join-Path $env:USERPROFILE ".cursor\skills"
 $InstallDir = Join-Path $CursorSkillsDir $SkillName
-$RepoUrl = "https://github.com/owner/$SkillName.git"
+$RepoUrl = "https://github.com/Tlkh201313/Build-cursorignore-skill-v2.git"
 
 if ($Uninstall) {
   if (Test-Path $InstallDir) {
